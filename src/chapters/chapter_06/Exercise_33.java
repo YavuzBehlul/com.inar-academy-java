@@ -6,7 +6,7 @@ public class Exercise_33 {
 	private static int daysInCurrentMonth;
 
 	public static void main(String[] args) {
-		System.out.println("The current date and time is " + getCurrentDateTime(3) + "\s (GMT+3)");
+		System.out.println("The current date and time is " + getCurrentDateTime(3) + "\\s (GMT+3)");
 
 		
 	}

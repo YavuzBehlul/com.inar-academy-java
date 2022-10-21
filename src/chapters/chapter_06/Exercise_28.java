@@ -4,7 +4,7 @@ public class Exercise_28 {
 
 	public static void main(String[] args) {
 		
-		System.out.println("p\s\s\s\s2^p-1");
+		System.out.println("p    2^p-1");
 		
 		for (int number = 2; number <= 31; number++) {
 			System.out.print(mersennePrime(number));
@@ -19,7 +19,7 @@ public class Exercise_28 {
 		int checkNum = pow - 1;
 
 		if (isPrime(checkNum)) {
-			return number + "\s\s\s\s" + checkNum + "\n";
+			return number + "    " + checkNum + "\n";
 		}
 		return "";
 	}
