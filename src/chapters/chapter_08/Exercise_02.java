@@ -24,9 +24,9 @@ public class Exercise_02 {
     public static double sumMajorDiagonal(double[][] m) {
 
         double sum = 0;
-        for (int column = 0; column < m.length; column++) {
+        for (int i = 0; i < m.length; i++) {
 
-            sum += m[column][column];
+            sum += m[i][i];
         }
         return sum;
 

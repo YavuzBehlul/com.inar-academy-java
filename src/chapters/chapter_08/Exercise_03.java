@@ -43,9 +43,8 @@ public class Exercise_03 {
 
         }
 
-        for (int a = 0; a < scoresArr.length; a++) {
-            System.out.println("Student " +
-                    scoresArr[a][1] + "'s correct count is: " + scoresArr[a][0]);
+        for (int[] e : scoresArr) {
+            System.out.printf("Student %d's correct count is: %d%n", e[1], e[0]);
         }
 
     }
