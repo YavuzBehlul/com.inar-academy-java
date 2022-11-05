@@ -1,33 +1,60 @@
 package weeks;
 
 public class Student {
-    String name;
-    String secondName;
-    String eMail;
-    int id;
-    boolean gender;
+    private String name;
+    private String surname;
+    private int id;
+    private String email;
 
-    Student() {
-        String name;
-        String secondName;
-        String eMail;
-        int id;
-        boolean gender;
+
+    public Student() {
+        this(" ", "", 0, " ");
 
     }
 
-    Student(String newName, String newEmail) {
-        name = newName;
-        eMail = newEmail;
+    public Student(String name, String surname, int id, String email) {
+        this.name = name;
+        this.surname = surname;
+        this.id = id;
+        this.email = email;
     }
 
-    void setName(String newName) {
-        name = newName;
+    public String getName() {
+        return this.name;
     }
 
-    String getName() {
+    public String getSurname() {
+        return this.surname;
+    }
 
-        return null;
+    public int getId() {
+        return this.id;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void print() {
+        System.out.println("Name: " + getName() +
+                "\nSurname: " + getSurname() +
+                "\nId: " + getId() +
+                "\nEmail: " + getEmail());
     }
 }
-
