@@ -80,7 +80,7 @@ public class FootballClub {
             System.out.println("Your capacity is full! Cannot sell more/that amount of tickets.");
             return;
         }
-        setBalance(getBalance() + getTicketFee() * numberOfTickets);
+        setBalance(getBalance() + (getTicketFee() * numberOfTickets));
         soldTicket += numberOfTickets;
     }
 
