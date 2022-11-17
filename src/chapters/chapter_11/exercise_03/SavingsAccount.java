@@ -13,8 +13,8 @@ public class SavingsAccount extends Account {
     @Override
     public void withdraw(double amount) {
         if(amount > super.getBalance()) {
-            System.out.println("Your balance is --> " + super.getBalance() + "$" + "\n" +
-                    "You can withdraw only --> " + super.getBalance() + "$");
+            System.out.println("Your balance is: " + super.getBalance() + "$" + "\n" +
+                    "You can withdraw only: " + super.getBalance() + "$");
             return;
         }
         super.setBalance(super.getBalance() - amount);

@@ -1,7 +1,7 @@
 package chapters.chapter_11.exercise_03;
 
 import chapters.chapter_09.exercise_07.Account;
-public class Test {
+public class Exercise_03 {
     public static void main(String[] args) {
         CheckingAccount account1 = new CheckingAccount(1, 5000, 5);
         SavingsAccount account2 = new SavingsAccount(2, 5000, 5);

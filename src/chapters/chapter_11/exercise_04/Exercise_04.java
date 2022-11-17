@@ -13,11 +13,12 @@ public class Exercise_04 {
         Integer number = input.nextInt();
 
         while (number.intValue() != 0) {
+
             list.add(number);
             number = input.nextInt();
         }
 
-        System.out.println("The largest number in the input is " + max(list));
+        System.out.println("The largest number is " + max(list));
     }
 
     public static Integer max(ArrayList<Integer> list) {
@@ -25,7 +26,9 @@ public class Exercise_04 {
             return null;
 
         Integer max = list.get(0);
+
         for (int i = 0; i < list.size(); i++) {
+
             if (list.get(i) > max)
                 max = list.get(i);
         }
