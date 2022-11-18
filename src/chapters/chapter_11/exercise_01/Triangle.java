@@ -51,6 +51,9 @@ public class Triangle extends SimpleGeometricObject{
 
     @Override
     public String toString() {
-        return "Triangle: side1 = " + this.side1 + "\nside2 = " + this.side2 + "\nside3 = " + this.side3;
+        return "----------Triangle-----------" +
+                " \nside1 = " + this.side1 +
+                "\nside2 = " + this.side2 +
+                "\nside3 = " + this.side3;
     }
 }
