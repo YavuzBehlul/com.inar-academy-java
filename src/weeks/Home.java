@@ -62,4 +62,6 @@ public class Home {
         System.out.println("Home's area: " + getArea());
         System.out.println("Home's area: " + getArea());
     }
+    //endregion
+    //</editor-fold>
 }
