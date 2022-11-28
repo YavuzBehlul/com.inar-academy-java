@@ -25,7 +25,7 @@ public class Exercise_21 {
     }
     private static boolean isFileSorted(File file) throws Exception {
 
-        boolean dataSorted = true;
+        boolean sorted = true;
         String string1 = "";
         String string2 = "";
 
@@ -35,20 +35,20 @@ public class Exercise_21 {
             if (input.hasNext())
                 string1 = input.next();
 
-            while (input.hasNext() && dataSorted) {
+            while (input.hasNext() && sorted) {
                 string2 = input.next();
 
                 if (string1.compareTo(string2) > 0) {
                     System.out.println(
                             "The strings " + string1 + " and " + string2 +
                                     " are out of order");
-                    dataSorted = false;
+                    sorted = false;
                 }
                 string1 = string2;
             }
         }
 
-        if (dataSorted) {
+        if (sorted) {
             System.out.println(
                     "The strings in the file are stored in increasing order");
             return true;

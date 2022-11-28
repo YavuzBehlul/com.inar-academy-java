@@ -8,17 +8,17 @@ public class Exercise_03 {
 
         Scanner input = new Scanner(System.in);
         int index;
-        boolean go = true;
+        boolean run = true;
 
-        while (go) {
+        while (run) {
 
             System.out.println("Enter an index: ");
             index = input.nextInt();
 
             try {
-
                 System.out.println("Index [" + index + "] is: " + arr[index]);
-                go = false;
+                run = false;
+
             } catch (ArrayIndexOutOfBoundsException ex) {
                 System.out.println("The index you enter is out of bounds");
                 System.out.println();
@@ -29,7 +29,7 @@ public class Exercise_03 {
         int[] arr = new int[size];
 
         for (int i = 0; i < size; i++) {
-            arr[i] = (int) (Math.random() * 10000);
+            arr[i] = (int) (Math.random() * 1_000);
         }
         return arr;
     }

@@ -4,7 +4,7 @@ public class Exercise_01 {
     public static void main(String[] args) {
 
         if (args.length != 4) {
-            System.out.println("Usage: java operand1 operator operand2");
+            System.out.println("Usage: java Exercise_01 operand1 operator operand2");
             System.exit(1);
         }
 

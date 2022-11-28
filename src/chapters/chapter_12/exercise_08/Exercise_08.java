@@ -23,11 +23,11 @@ public class Exercise_08 {
         }
     }
 
-    public static int hexToDecimal(String hex) throws HexFormatException{
+    public static int hexToDecimal(String hex) throws HexFormatException {
 
         for (int i = 0; i < hex.length(); i++) {
-            char c = hex.charAt(i);
-            if (!(c >= 'A' && c <= 'F') && !(c >= '0' && c <= '9')) {
+            char chr = hex.charAt(i);
+            if (!(chr >= 'A' && chr <= 'F') && !(chr >= '0' && chr <= '9')) {
                 throw new HexFormatException(hex);
             }
         }

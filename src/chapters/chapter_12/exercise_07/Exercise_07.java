@@ -6,20 +6,20 @@ public class Exercise_07 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         boolean run = true;
-        while (run){
+        while (run) {
             System.out.print("Enter a binary number: ");
-            String s = input.nextLine();
+            String str = input.nextLine();
 
             try {
-                System.out.println(bin2Dec(s));
+                System.out.println(bin2Dec(str));
                 run = false;
 
-            }catch (Exception ex){
+            } catch (Exception ex) {
                 System.out.println("Input is not a binary number!");
             }
         }
     }
-    public static int bin2Dec(String binary){
+    public static int bin2Dec(String binary) {
 
         for (int i = 0; i < binary.length(); i++) {
             char c = binary.charAt(i);

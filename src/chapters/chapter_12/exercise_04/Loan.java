@@ -77,7 +77,8 @@ public class Loan {
         return loanDate;
     }
     public String toString() {
-        String s = String.format("Loan Amount: %.2f\nTotal Amount %.2f", this.loanAmount, this.getTotalPayment());
-        return s;
+        String str = String.format("Loan Amount: %.2f\nTotal Amount %.2f",
+                this.loanAmount, this.getTotalPayment());
+        return str;
     }
 }
