@@ -1,56 +1,47 @@
 package chapters.chapter_12.exercise_31;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Exercise_31 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
-
         System.out.print("Enter the year: ");
-        String year = input.nextLine();
-
-        System.out.print("Enter the gender: ");
-        String gender = input.nextLine();
-
+        int year = input.nextInt();
+        System.out.print("Enter the gender(M/F): ");
+        char gender = input.next().charAt(0);
         System.out.print("Enter the name: ");
-        String name = input.nextLine();
+        String name = input.next();
 
-        ArrayList<String> list = new ArrayList<>();
+        File file = new File("C:\\Users\\opggx_000\\Desktop\\babynameranking" + year + ".txt");
 
-        try {
-            java.net.URL url = new java.net.URL(
-                    "https://www.ssa.gov/oact/babynames/decades/names" +
-                            year + "s.html");
-
-            input = new Scanner(url.openStream());
-
-            while (input.hasNext()) {
-                for (int i = 0; i < 5; i++) {
-                    list.add(i, input.next());
-                }
-
-                if (list.get(gender(gender)).equals(name)) {
-                    System.out.println(
-                            name + " is ranked:" + list.get(0) + " in year " + year);
-                    System.exit(0);
-                }
-                list.clear();
-            }
-        } catch (java.net.MalformedURLException ex) {
-            System.out.println("Invalid URL");
-        } catch (java.io.IOException ex) {
-            System.out.println("I/O Errors: no such file");
+        if (!file.exists()) {
+            System.out.println("No such file.");
+            System.exit(1);
         }
+        boolean isFound = false;
 
-        System.out.println("The name " + name + " is not ranked in year " + year);
-    }
+        try (
+                Scanner input2 = new Scanner(file)
+        ) {
+            while (input2.hasNext()) {
+                int num = input2.nextInt();
+                String maleName = input2.next();
+                double maleBirthRate = input2.nextDouble();
+                String femaleName = input2.next();
+                double femaleBirthRate = input2.nextDouble();
 
-    public static int gender(String gender) {
-        if (gender.equals("M"))
-            return 1;
-        else
-            return 3;
+                if ((gender == 'M' && name.equals(maleName)) || (gender == 'F' && name.equals(femaleName))) {
+                    System.out.println(name + " is ranked #" + num + " in year " + year);
+                    isFound = true;
+                    break;
+                }
+            }
+        }
+        if (!isFound) {
+            System.out.println("The name " + name + " is not ranked in year " + year);
+        }
     }
 
 }
